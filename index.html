@@ -16,12 +16,25 @@
 
     </canvas>
     <div id="actions" class="actions">
-      <button id="eraser">
+      <svg id="brush" class="icon active">
+        <use xlink:href="#icon-pan_icon"></use>
+    </svg>
+    <svg id="eraser" class="icon">
+      <use xlink:href="#icon-xiangpi"></use>
+  </svg>
+      <!-- <button id="eraser">
         橡皮擦
       </button>
-      <button id="brush">画笔</button>
+      <button id="brush">画笔</button> -->
     </div>
+    <ol class="color">
+      <li id="red" class="red"></li>
+      <li id="green" class="green"></li>
+      <li id="blue" class="blue"></li>
+    </ol>
+
     <script src="./main.js"></script>
+    <script src="https://at.alicdn.com/t/font_1293185_m8kjxs1rbz.js"></script>
 </body>
 
 </html>

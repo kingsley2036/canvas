@@ -3,6 +3,25 @@ var context = yyy.getContext('2d');
 autoSetCanvasSize(yyy)
 listenToUser(yyy)
 
+//切换颜色
+red.onclick=function(){
+  context.strokeStyle='red'
+  red.classList.add('active')
+  green.classList.remove('active')
+  blue.classList.remove('active')
+}
+green.onclick=function(){
+  context.strokeStyle='green';
+  green.classList.add('active')
+  red.classList.remove('active')
+  blue.classList.remove('active')
+}
+blue.onclick=function(){
+  context.strokeStyle='blue';
+  blue.classList.add('active')
+  green.classList.remove('active')
+  red.classList.remove('active')
+}
 
 
 // 画圆函数
@@ -140,14 +159,18 @@ canvas.ontouchmove=function(aaa){
 
 /******/
 var eraserEnable = false
-eraser.onclick = function () {
-  eraserEnable = true
-  actions.className = "actions x"
+brush.onclick=function(){
+  eraserEnable = false;
+  brush.classList.add('active')
+  eraser.classList.remove('active')
 }
-brush.onclick = function () {
-  eraserEnable = false
-  actions.className = "actions"
+
+eraser.onclick=function(){
+  eraserEnable = true;
+  eraser.classList.add('active')
+  brush.classList.remove('active')
 }
+
 
 function autoSetCanvasSize(canvas) {
   setCanvasSize()
