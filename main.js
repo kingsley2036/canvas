@@ -76,7 +76,7 @@ function listenToUser(canvas) {
     canvas.ontouchstart = function (aaa) {
       var x = aaa.touches[0].clientX
       var y = aaa.touches[0].clientY
-      console.log(x, y)
+      // console.log(x, y)
       using = true
       if (eraserEnable) {
 
